@@ -63,148 +63,162 @@
 </head>
 <body class="bg-white text-black">
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative w-full h-screen flex flex-col items-center justify-center p-8 text-center overflow-hidden">
-        <canvas id="hero-canvas"></canvas>
-        <div class="z-10 flex flex-col items-center">
-            <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold text-black mb-4 section-content">
-                QAB Global LLC
-            </h1>
-            <div class="w-24 h-1 bg-red-500 rounded-full mb-8 section-content"></div>
-            <p class="text-lg sm:text-xl md:text-2xl font-normal text-black section-content delay-200">
-                Innovation • Ventures • Solutions
-            </p>
-            <a href="#contact" class="mt-12 px-8 py-4 bg-red-500 text-white font-bold rounded-full transition-transform hover:scale-105 glow-button section-content delay-400">
-                Get Started
-            </a>
-        </div>
-    </section>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm fixed w-full top-0 left-0 z-20">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center py-4 px-4 md:px-16 lg:px-32" aria-label="Main navigation">
+            <a href="#hero" class="text-2xl font-extrabold text-black">QAB Global LLC</a>
+            <ul class="flex space-x-8 text-lg font-medium">
+                <li><a href="#about" class="hover:text-red-500 transition-colors">About</a></li>
+                <li><a href="#services" class="hover:text-red-500 transition-colors">Services</a></li>
+                <li><a href="#contact" class="hover:text-red-500 transition-colors">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- About Us Section -->
-    <section id="about" class="bg-white py-20 px-4 md:px-16 lg:px-32">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-16 section-content">
-            <div class="flex-1 text-center md:text-left">
-                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">About Us</h2>
-                <div class="w-16 h-1 bg-red-500 rounded-full mb-8 mx-auto md:mx-0"></div>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    QAB Global LLC is a multi-purpose company based in Texas, specializing in car rentals, commercial transport, wholesale, e-commerce, and AI-powered technology solutions. We are committed to building innovative ventures that solve complex challenges and drive future-forward solutions for our clients and partners.
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="relative w-full h-screen flex flex-col items-center justify-center p-8 text-center overflow-hidden" role="region" aria-label="Hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="z-10 flex flex-col items-center">
+                <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold text-black mb-4 section-content">
+                    QAB Global LLC
+                </h1>
+                <div class="w-24 h-1 bg-red-500 rounded-full mb-8 section-content"></div>
+                <p class="text-lg sm:text-xl md:text-2xl font-normal text-black section-content delay-200">
+                    Innovation • Ventures • Solutions
                 </p>
+                <a href="#contact" class="mt-12 px-8 py-4 bg-red-500 text-white font-bold rounded-full transition-transform hover:scale-105 glow-button section-content delay-400">
+                    Get Started
+                </a>
             </div>
-            <div class="flex-1 flex flex-col gap-8 justify-center items-center md:items-start">
-                <!-- 3D Illustrations (represented by SVGs) -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 w-full">
-                    <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M18.92 6.57c-.12-.34-.4-.57-.75-.57h-12c-.35 0-.63.23-.75.57L3 13v7c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-7l-2.08-6.43zM6.5 17c-.83 0-1.5-.67-1.5-1.5S5.67 14 6.5 14s1.5.67 1.5 1.5S7.33 17 6.5 17zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zM5.5 12l.84-2.5h10.32l.84 2.5H5.5z"/>
-                    </svg>
-                    <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.99 2.99 0 00-3-3 2.99 2.99 0 00-3 3c0 .35.07.69.18 1H8c-.11-.31-.18-.65-.18-1a2.99 2.99 0 00-3-3 2.99 2.99 0 00-3 3c0 .35.07.69.18 1H2v15c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V6zM8 5a1 1 0 011-1h6a1 1 0 011 1v1H8V5zm8 14H8v-2h8v2zm3-3H5V8h14v8z"/>
-                    </svg>
-                    <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-white py-20 px-4 md:px-16 lg:px-32">
-        <div class="max-w-7xl mx-auto text-center section-content">
-            <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">Our Services</h2>
-            <div class="w-16 h-1 bg-red-500 rounded-full mb-12 mx-auto"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <!-- Service Card 1 -->
-                <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
-                    <div class="w-full flex justify-center mb-6">
-                        <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M20 9.5c0-.82-.68-1.5-1.5-1.5H17V2c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v6H9c-.82 0-1.5-.68-1.5-1.5v-3c0-.82-.68-1.5-1.5-1.5h-1c-.82 0-1.5.68-1.5 1.5v3c0 .82.68 1.5 1.5 1.5H3c-.82 0-1.5.68-1.5 1.5v3c0 .82.68 1.5 1.5 1.5H7v6c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-6h3.5c.82 0 1.5-.68 1.5-1.5v-3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Car Rentals & Transport</h3>
-                    <p class="text-gray-600">
-                        Offering a modern fleet of vehicles for personal and commercial use, alongside comprehensive logistics and transport solutions.
+        <!-- About Us Section -->
+        <section id="about" class="bg-white py-20 px-4 md:px-16 lg:px-32" role="region" aria-label="About Us">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-16 section-content">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">About Us</h2>
+                    <div class="w-16 h-1 bg-red-500 rounded-full mb-8 mx-auto md:mx-0"></div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        QAB Global LLC is a multi-purpose company based in Texas, specializing in car rentals, commercial transport, wholesale, e-commerce, and AI-powered technology solutions. We are committed to building innovative ventures that solve complex challenges and drive future-forward solutions for our clients and partners.
                     </p>
                 </div>
-
-                <!-- Service Card 2 -->
-                <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
-                    <div class="w-full flex justify-center mb-6">
-                        <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M18.41 16.59L12 10.18l-6.41 6.41L4 15.18l8-8 8 8z"/>
-                            <path d="M12 2L6 8h12z"/>
+                <div class="flex-1 flex flex-col gap-8 justify-center items-center md:items-start">
+                    <!-- 3D Illustrations (represented by SVGs) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12 w-full">
+                        <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18.92 6.57c-.12-.34-.4-.57-.75-.57h-12c-.35 0-.63.23-.75.57L3 13v7c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-7l-2.08-6.43zM6.5 17c-.83 0-1.5-.67-1.5-1.5S5.67 14 6.5 14s1.5.67 1.5 1.5S7.33 17 6.5 17zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zM5.5 12l.84-2.5h10.32l.84 2.5H5.5z"/>
                         </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Wholesale & E-Commerce</h3>
-                    <p class="text-gray-600">
-                        Streamlined wholesale distribution and cutting-edge e-commerce platforms to help businesses grow their market reach.
-                    </p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
-                    <div class="w-full flex justify-center mb-6">
-                        <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                            <circle cx="12" cy="12" r="4"/>
+                        <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.99 2.99 0 00-3-3 2.99 2.99 0 00-3 3c0 .35.07.69.18 1H8c-.11-.31-.18-.65-.18-1a2.99 2.99 0 00-3-3 2.99 2.99 0 00-3 3c0 .35.07.69.18 1H2v15c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V6zM8 5a1 1 0 011-1h6a1 1 0 011 1v1H8V5zm8 14H8v-2h8v2zm3-3H5V8h14v8z"/>
                         </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">AI & Tech Solutions</h3>
-                    <p class="text-gray-600">
-                        Developing and deploying AI-powered technologies to enhance efficiency, intelligence, and business strategy.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-black py-20 px-4 md:px-16 lg:px-32 text-white">
-        <div class="max-w-7xl mx-auto text-center section-content">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h2>
-            <div class="w-16 h-1 bg-red-500 rounded-full mb-12 mx-auto"></div>
-            <div class="flex flex-col md:flex-row gap-16 justify-center items-start">
-                <!-- Contact Form -->
-                <div class="flex-1 w-full max-w-xl">
-                    <form class="space-y-6 text-left">
-                        <div>
-                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"></textarea>
-                        </div>
-                        <div class="text-center md:text-left">
-                            <button type="submit" class="w-full md:w-auto px-8 py-4 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transition-colors glow-button">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <!-- Contact Info -->
-                <div class="flex-1 w-full max-w-xl text-left md:text-right">
-                    <div class="space-y-4">
-                        <div class="text-lg">
-                            <h4 class="font-bold text-gray-400">Email</h4>
-                            <a href="mailto:info@qabglobal.com" class="text-white hover:text-red-500 transition-colors">info@qabglobal.com</a>
-                        </div>
-                        <div class="text-lg">
-                            <h4 class="font-bold text-gray-400">Location</h4>
-                            <p class="text-white">Irving, Texas</p>
-                        </div>
+                        <svg class="w-24 h-24 text-red-500 opacity-80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-white py-20 px-4 md:px-16 lg:px-32" role="region" aria-label="Our Services">
+            <div class="max-w-7xl mx-auto text-center section-content">
+                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">Our Services</h2>
+                <div class="w-16 h-1 bg-red-500 rounded-full mb-12 mx-auto"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Service Card 1 -->
+                    <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
+                        <div class="w-full flex justify-center mb-6">
+                            <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20 9.5c0-.82-.68-1.5-1.5-1.5H17V2c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v6H9c-.82 0-1.5-.68-1.5-1.5v-3c0-.82-.68-1.5-1.5-1.5h-1c-.82 0-1.5.68-1.5 1.5v3c0 .82.68 1.5 1.5 1.5H3c-.82 0-1.5.68-1.5 1.5v3c0 .82.68 1.5 1.5 1.5H7v6c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-6h3.5c.82 0 1.5-.68 1.5-1.5v-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Car Rentals & Transport</h3>
+                        <p class="text-gray-600">
+                            Offering a modern fleet of vehicles for personal and commercial use, alongside comprehensive logistics and transport solutions.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
+                        <div class="w-full flex justify-center mb-6">
+                            <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.41 16.59L12 10.18l-6.41 6.41L4 15.18l8-8 8 8z"/>
+                                <path d="M12 2L6 8h12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Wholesale & E-Commerce</h3>
+                        <p class="text-gray-600">
+                            Streamlined wholesale distribution and cutting-edge e-commerce platforms to help businesses grow their market reach.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card p-8 rounded-lg border-2 border-white hover:border-red-500 transition-all duration-300">
+                        <div class="w-full flex justify-center mb-6">
+                            <svg class="service-card-icon w-20 h-20 text-black" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">AI & Tech Solutions</h3>
+                        <p class="text-gray-600">
+                            Developing and deploying AI-powered technologies to enhance efficiency, intelligence, and business strategy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-black py-20 px-4 md:px-16 lg:px-32 text-white" role="region" aria-label="Contact Us">
+            <div class="max-w-7xl mx-auto text-center section-content">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-16 h-1 bg-red-500 rounded-full mb-12 mx-auto"></div>
+                <div class="flex flex-col md:flex-row gap-16 justify-center items-start">
+                    <!-- Contact Form -->
+                    <div class="flex-1 w-full max-w-xl">
+                        <form class="space-y-6 text-left">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"></textarea>
+                            </div>
+                            <div class="text-center md:text-left">
+                                <button type="submit" class="w-full md:w-auto px-8 py-4 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transition-colors glow-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="flex-1 w-full max-w-xl text-left md:text-right">
+                        <div class="space-y-4">
+                            <div class="text-lg">
+                                <h4 class="font-bold text-gray-400">Email</h4>
+                                <a href="mailto:info@qabglobal.com" class="text-white hover:text-red-500 transition-colors">info@qabglobal.com</a>
+                            </div>
+                            <div class="text-lg">
+                                <h4 class="font-bold text-gray-400">Location</h4>
+                                <p class="text-white">Irving, Texas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-8 px-4 md:px-16 lg:px-32 text-center">
+    <footer class="bg-black text-white py-8 px-4 md:px-16 lg:px-32 text-center" role="contentinfo">
         <div class="max-w-7xl mx-auto border-t-2 border-red-500 pt-8">
             <div class="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-4">
                 <div class="text-sm">

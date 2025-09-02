@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAB Global LLC - Innovation • Ventures • Solutions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <header class="text-center py-10">
+        <h1 class="text-4xl font-extrabold">QAB Global LLC</h1>
+        <p class="text-lg mt-4">Innovation • Ventures • Solutions</p>
+    </header>
+    <main class="max-w-7xl mx-auto px-4">
+        <section id="about" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-4">About Us</h2>
+            <p class="text-lg text-gray-700 text-center">
+                QAB Global LLC is a multi-purpose company based in Texas, specializing in car rentals, commercial transport, wholesale, e-commerce, and AI-powered technology solutions.
+            </p>
+        </section>
+        <section id="services" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-4">Our Services</h2>
+            <ul class="list-disc list-inside text-lg text-gray-700">
+                <li>Car Rentals & Transport</li>
+                <li>Wholesale & E-Commerce</li>
+                <li>AI & Tech Solutions</li>
+            </ul>
+        </section>
+        <section id="contact" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+            <p class="text-lg text-gray-700 text-center">Email: <a href="mailto:info@qabglobal.com" class="text-red-500">info@qabglobal.com</a></p>
+        </section>
+    </main>
+    <footer class="text-center py-10">
+        <p>&copy; <span id="currentYear"></span> QAB Global LLC. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
