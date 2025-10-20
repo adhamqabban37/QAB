@@ -1,48 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QAB Global LLC - Innovation • Ventures • Solutions</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
     </style>
-</head>
-<body class="bg-white text-black">
+  </head>
+  <body class="bg-white text-black">
     <header class="text-center py-10">
-        <h1 class="text-4xl font-extrabold">QAB Global LLC</h1>
-        <p class="text-lg mt-4">Innovation • Ventures • Solutions</p>
+      <h1 class="text-4xl font-extrabold">QAB Global LLC</h1>
+      <p class="text-lg mt-4">Innovation • Ventures • Solutions</p>
     </header>
+    <div class="w-full flex justify-center items-center py-6">
+      <img
+        id="siteLogo"
+        src="../../assets/images/qab-logo.png"
+        alt="QAB Logo"
+        onerror="this.onerror=null; this.src='../../assets/images/logo-placeholder.svg';"
+        class="max-w-xs md:max-w-sm h-auto"
+        style="opacity: 0"
+      />
+    </div>
     <main class="max-w-7xl mx-auto px-4">
-        <section id="about" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-4">About Us</h2>
-            <p class="text-lg text-gray-700 text-center">
-                QAB Global LLC is a multi-purpose company based in Texas, specializing in car rentals, commercial transport, wholesale, e-commerce, and AI-powered technology solutions.
-            </p>
-        </section>
-        <section id="services" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-4">Our Services</h2>
-            <ul class="list-disc list-inside text-lg text-gray-700">
-                <li>Car Rentals & Transport</li>
-                <li>Wholesale & E-Commerce</li>
-                <li>AI & Tech Solutions</li>
-            </ul>
-        </section>
-        <section id="contact" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
-            <p class="text-lg text-gray-700 text-center">Email: <a href="mailto:info@qabglobal.com" class="text-red-500">info@qabglobal.com</a></p>
-        </section>
+      <section id="about" class="py-20">
+        <h2 class="text-3xl font-bold text-center mb-4">About Us</h2>
+        <p class="text-lg text-gray-700 text-center">
+          QAB Global LLC is a multi-purpose company based in Texas, specializing
+          in car rentals, commercial transport, wholesale, e-commerce, and
+          AI-powered technology solutions.
+        </p>
+      </section>
+      <section id="services" class="py-20">
+        <h2 class="text-3xl font-bold text-center mb-4">Our Services</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700">
+          <li>Car Rentals & Transport</li>
+          <li>Wholesale & E-Commerce</li>
+          <li>AI & Tech Solutions</li>
+        </ul>
+      </section>
+      <section id="contact" class="py-20">
+        <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+        <p class="text-lg text-gray-700 text-center">
+          Email:
+          <a href="mailto:qabgloballlc@gmail.com" class="text-red-500"
+            >info@qabglobal.com</a
+          >
+        </p>
+      </section>
     </main>
     <footer class="text-center py-10">
-        <p>&copy; <span id="currentYear"></span> QAB Global LLC. All rights reserved.</p>
+      <p>
+        &copy; <span id="currentYear"></span> QAB Global LLC. All rights
+        reserved.
+      </p>
     </footer>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
     </script>
-</body>
+    <script>
+      // Remove white/near-white background from logo client-side
+      (function removeLogoBg() {
+        const img = document.getElementById("siteLogo");
+        if (!img) return;
+        if (img.complete) process();
+        else img.onload = process;
+
+        function process() {
+          try {
+            const w = img.naturalWidth;
+            const h = img.naturalHeight;
+            if (!w || !h) return (img.style.opacity = 1);
+            const canvas = document.createElement("canvas");
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            const imgData = ctx.getImageData(0, 0, w, h);
+            const data = imgData.data;
+            const threshold = 235; // treat near-white as background
+            for (let i = 0; i < data.length; i += 4) {
+              const r = data[i],
+                g = data[i + 1],
+                b = data[i + 2];
+              if (r >= threshold && g >= threshold && b >= threshold) {
+                data[i + 3] = 0; // transparent
+              }
+            }
+            ctx.putImageData(imgData, 0, 0);
+            const url = canvas.toDataURL("image/png");
+            img.src = url;
+          } catch (_) {
+            // If any error, just show original
+          } finally {
+            img.style.opacity = 1;
+          }
+        }
+      })();
+    </script>
+  </body>
 </html>
