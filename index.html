@@ -35,8 +35,7 @@
         transition: box-shadow 0.3s ease-in-out;
       }
       .glow-button:hover {
-        box-shadow: 0 0 15px theme("colors.red.500"),
-          0 0 25px theme("colors.red.500");
+        /* Highlight removed */
       }
 
       /* Animation for section content on scroll */
@@ -59,9 +58,6 @@
       }
       .service-card-icon {
         transition: filter 0.3s ease-in-out;
-      }
-      .service-card:hover .service-card-icon {
-        filter: drop-shadow(0 0 8px theme("colors.red.500"));
       }
 
       /* Success toast */
@@ -99,7 +95,7 @@
 
       /* Animated Logo (scoped) */
       :root {
-        --logo-url: url("https://i.imgur.com/aMptOUx.png");
+        --logo-url: url("https://i.imgur.com/Gfs13bf.png");
         --glow-color: #00d1ff;
         --glow-soft: rgba(0, 209, 255, 0.35);
         --glow-strong: rgba(0, 209, 255, 0.8);
@@ -121,39 +117,18 @@
         isolation: isolate;
         transform-style: preserve-3d;
         will-change: transform, filter;
-        animation: intro var(--intro-duration) 60ms both,
-          glow-pulse 3.2s ease-in-out 0.8s infinite;
+        animation: intro var(--intro-duration) 60ms both;
       }
       .logo {
-        width: clamp(220px, 40vw, 520px);
-        aspect-ratio: auto;
+        width: clamp(80px, 15vw, 150px);
+        aspect-ratio: 1 / 1; /* Make it square for the new logo */
         position: relative;
         display: block;
         background-image: var(--logo-url);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        filter: drop-shadow(0 0 14px var(--glow-soft))
-          drop-shadow(0 0 28px rgba(0, 209, 255, 0.15));
         transform: translateZ(0);
-      }
-      .logo::after {
-        content: "";
-        position: absolute;
-        inset: -20% -120%;
-        background: linear-gradient(
-          100deg,
-          rgba(255, 255, 255, 0) 40%,
-          rgba(255, 255, 255, 0.75) 50%,
-          rgba(160, 240, 255, 0.45) 52%,
-          rgba(255, 255, 255, 0) 60%
-        );
-        transform: translateX(-60%) rotate(18deg);
-        mix-blend-mode: screen;
-        opacity: 0;
-        pointer-events: none;
-        will-change: transform, opacity;
-        animation: sweep var(--sweep-period) linear 1.1s infinite;
       }
       .particles {
         position: absolute;
@@ -196,31 +171,6 @@
         100% {
           opacity: 1;
           transform: scale(1) translateZ(0);
-        }
-      }
-      @keyframes glow-pulse {
-        0%,
-        100% {
-          filter: drop-shadow(0 0 10px var(--glow-soft))
-            drop-shadow(0 0 24px rgba(0, 209, 255, 0.18));
-        }
-        50% {
-          filter: drop-shadow(0 0 18px var(--glow-strong))
-            drop-shadow(0 0 36px rgba(0, 209, 255, 0.35));
-        }
-      }
-      @keyframes sweep {
-        0% {
-          transform: translateX(-65%) rotate(18deg);
-          opacity: 0;
-        }
-        6% {
-          opacity: 0.9;
-        }
-        14%,
-        100% {
-          transform: translateX(65%) rotate(18deg);
-          opacity: 0;
         }
       }
       @keyframes burst {
@@ -269,20 +219,20 @@
       <span>Message ready to send</span>
     </div>
     <!-- Centered Animated Logo -->
-    <div class="w-full flex justify-center items-center py-8">
-      <div class="scene" id="scene">
-        <div class="logo-wrap" id="logoWrap" aria-label="QAB Logo, animated">
-          <div class="particles" id="particles"></div>
-          <div class="logo" id="logo" role="img" aria-label="QAB Logo"></div>
-        </div>
-      </div>
-    </div>
 
     <!-- Hero Section -->
     <section
       id="hero"
       class="relative w-full h-screen flex flex-col items-center justify-center p-8 text-center overflow-hidden"
     >
+      <div class="absolute top-4 left-4 z-20">
+        <div class="scene" id="scene">
+          <div class="logo-wrap" id="logoWrap" aria-label="QAB Logo, animated">
+            <div class="particles" id="particles"></div>
+            <div class="logo" id="logo" role="img" aria-label="QAB Logo"></div>
+          </div>
+        </div>
+      </div>
       <canvas id="hero-canvas"></canvas>
       <div class="z-10 flex flex-col items-center">
         <h1
@@ -779,3 +729,8 @@
     </script>
   </body>
 </html>
+
+
+
+
+
